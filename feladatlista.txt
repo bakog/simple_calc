@@ -1,0 +1,15 @@
+Grafikus felületet követelmények:
+
+- 0-9 gombok kellenek rá a számok beviteléhez
+- +,-,*,/,= gombok a mûveleti jelek beviteléhez
+- Gomb a beviteli mezõ törléséhez (asszem C a számológépeken)
+- Beviteli mezõ (Textbox) az adatok beviteléhez
+
+Tárolandó adatok:
+
+- lista (string típusú) adatok beviteléhez (ez tárolja a számokat és a mûveleti jeleket)
+- bool tipus a hibás adatbevitel, vagy mûvelet jelzéséhez
+
+Függvények, eljárások:
+- a bevitt adatok ellenõrzése és tárolása
+- a lista feldolgozása és a számolás elvégzése

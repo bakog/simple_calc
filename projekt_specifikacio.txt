@@ -1,0 +1,17 @@
+Projekt célja: C#-ban egyszerû számológép készítése, amely a 4 alapmûveletet (+,-,*,/) képes elvégezni
+
+Követelmények:
+1. Grafikus felület alkalmazása
+2. Számjegyek és mûveleti jelek gombként történõ megjelenítése a felületen
+3. Az adatok listában történõ tárolása (string)
+4. Helyes mûveleti sorrend
+5. A mûveletben szereplõ tagok (számok, mûveleti jelek) megjelenítése
+6. Függvények/eljárások alkalmazása
+
+Feladatok:
+1. Grafikus felület elkészítése
+2. Tárolandó adatok és segédadatok definiálása
+3. Adatbeviteli események elkészítése
+4. Adatbeviteli események ellenõrzése, tárolás
+5. Számolást végzõ eljárás leprogramozása
+6. Tesztelés
