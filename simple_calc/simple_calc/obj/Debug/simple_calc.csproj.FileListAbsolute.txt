@@ -1,1 +1,10 @@
 E:\Dropbox\MA\2_felev\projekt\simple_calc\simple_calc\simple_calc\bin\Debug\simple_calc.exe.config
+D:\Saját\Projekt\simple_calc\simple_calc\bin\Debug\simple_calc.exe.config
+D:\Saját\Projekt\simple_calc\simple_calc\bin\Debug\simple_calc.exe
+D:\Saját\Projekt\simple_calc\simple_calc\bin\Debug\simple_calc.pdb
+D:\Saját\Projekt\simple_calc\simple_calc\obj\Debug\simple_calc.csprojResolveAssemblyReference.cache
+D:\Saját\Projekt\simple_calc\simple_calc\obj\Debug\simple_calc.Form1.resources
+D:\Saját\Projekt\simple_calc\simple_calc\obj\Debug\simple_calc.Properties.Resources.resources
+D:\Saját\Projekt\simple_calc\simple_calc\obj\Debug\simple_calc.csproj.GenerateResource.Cache
+D:\Saját\Projekt\simple_calc\simple_calc\obj\Debug\simple_calc.exe
+D:\Saját\Projekt\simple_calc\simple_calc\obj\Debug\simple_calc.pdb
