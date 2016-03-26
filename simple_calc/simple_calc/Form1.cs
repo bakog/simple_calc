@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace simple_calc
 {
     public partial class Form1 : Form
@@ -15,7 +17,48 @@ namespace simple_calc
         static string akt_gomb, elozo_gomb;
         static List<string> muv_tagok = new List<string>();
         static string akt_szam;
-
+        public int next_muv()
+        {
+            int index1, index2;
+            if (muv_tagok.Contains("*") && muv_tagok.Contains("/"))
+            {
+                index1 = muv_tagok.IndexOf("*");
+                index2 = muv_tagok.IndexOf("/");
+                if (index1 < index2) return index1;
+                else return index2;
+            }
+            else if (muv_tagok.Contains("*"))
+            {
+                index1 = muv_tagok.IndexOf("*");
+                return index1;
+            }
+            else if (muv_tagok.Contains("/"))
+            {
+                index1 = muv_tagok.IndexOf("/");
+                return index1;
+            }
+            else if (muv_tagok.Contains("+") && muv_tagok.Contains("-"))
+            {
+                index1 = muv_tagok.IndexOf("+");
+                index2 = muv_tagok.IndexOf("-");
+                if (index1 < index2) return index1;
+                else return index2;
+            }
+            else if (muv_tagok.Contains("+"))
+            {
+                index1 = muv_tagok.IndexOf("+");
+                return index1;
+            }
+            else if (muv_tagok.Contains("-"))
+            {
+                index1 = muv_tagok.IndexOf("-");
+                return index1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
         public void tarol(string s)
         {
             if (akt_gomb == null || akt_gomb == "") //első bevitel
@@ -233,7 +276,7 @@ namespace simple_calc
                 {
                     label1.Text += tag + ", ";
                 }
-
+                label2.Text = "Az első művelet indexe: "+Convert.ToString (next_muv());
             }
 
 
