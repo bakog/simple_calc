@@ -15,3 +15,5 @@ Feladatok:
 4. Adatbeviteli események ellenõrzése, tárolás
 5. Számolást végzõ eljárás leprogramozása
 6. Tesztelés
+
+- elvileg jól számol, de minden számolás után törölni kell az listát (C gombbal, különben hibára fut) megy a buszom, majd késõbb megnézem...
