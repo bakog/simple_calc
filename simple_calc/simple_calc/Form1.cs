@@ -17,6 +17,8 @@ namespace simple_calc
         static string akt_gomb, elozo_gomb;
         static List<string> muv_tagok = new List<string>();
         static string akt_szam;
+        static bool error; 
+
         public int next_muv()
         {
             int index1, index2;
@@ -151,7 +153,68 @@ namespace simple_calc
 
         }
 
+        public void kiszamol()
+        {
+            //itt végezzük a kiszámolást, ha egyenlőségjelet nyomott és a textbox1.text nem üres
+            //az utolsó tárolt műveleti jel ==, ez t töröljük
+            muv_tagok.RemoveAt(muv_tagok.Count() - 1);
 
+            //bejárjuk a muv_tagok listát és megkeressük, az éppen aktuális műveletet, amíg hibát nem kapunk vissza, vagy el nem fogy a lista
+            error = false;
+            while (next_muv() != 0 && !error)
+            {
+                szamol(next_muv() - 1);
+            }
+            if (!error)
+            {
+                //nincs hiba, az eredmény kiírása
+                textBox1.Text = muv_tagok[0];
+                muv_tagok.Clear();
+            }
+            else
+            {
+                //hibaüzenet megjelenítése
+                label1.Text = "Érvénytelen művelet!";
+            }
+
+        }
+        public bool szamol(int i)
+        {
+            //ez a függvény végzi a számolást: kivesz 3 elemet a listából, majd a művelet elvégzése után törli azokat 
+            // és i helyére visszaírja az eredményt (ez lesz e következő művelet egyik tagja, vagy a végeredmény
+            int range = 3;
+            double eredmeny;
+            string a, muvelet, b;
+            double szam1, szam2;
+            //három elem kivétele a muv_tagok listából
+            a = muv_tagok[i];
+            muvelet = muv_tagok[i + 1];
+            b = muv_tagok[i + 2];
+
+            szam1 = Convert.ToDouble(a);
+            szam2 = Convert.ToDouble(b);
+            switch (muvelet)
+            {
+                case "+": eredmeny = szam1 + szam2; break;
+                case "-": eredmeny = szam1 - szam2; break;
+                case "/": if (szam2 == 0) { error = true; eredmeny = 0; } else { eredmeny = szam1 / szam2; } break;
+                case "*": eredmeny = szam1 * szam2; break;
+                default: error = true; eredmeny = 0; break;
+            }
+            if (!error)
+            {
+                //a 3 elem törlése a listából és az eredmény visszaírása a lista i. helyére
+                muv_tagok.RemoveRange(i, range);
+                muv_tagok.Insert(i, Convert.ToString(eredmeny));
+                return error;
+            }
+            else
+            {
+                // hiba volt a feldolgozás során
+                return error = true;
+            }
+
+        }
 
         public Form1()
         {
@@ -277,6 +340,7 @@ namespace simple_calc
                     label1.Text += tag + ", ";
                 }
                 label2.Text = "Az első művelet indexe: "+Convert.ToString (next_muv());
+                kiszamol();
             }
 
 
