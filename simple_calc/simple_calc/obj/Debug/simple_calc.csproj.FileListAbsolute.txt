@@ -17,3 +17,5 @@ C:\adatok\Dropbox\MA\2_felev\projekt\simple_calc\simple_calc\simple_calc\bin\Deb
 C:\adatok\Dropbox\MA\2_felev\projekt\simple_calc\simple_calc\simple_calc\bin\Debug\simple_calc.pdb
 C:\adatok\Dropbox\MA\2_felev\projekt\simple_calc\simple_calc\simple_calc\obj\Debug\simple_calc.exe
 C:\adatok\Dropbox\MA\2_felev\projekt\simple_calc\simple_calc\simple_calc\obj\Debug\simple_calc.pdb
+E:\Dropbox\MA\2_felev\projekt\simple_calc\simple_calc\simple_calc\obj\Debug\simple_calc.exe
+E:\Dropbox\MA\2_felev\projekt\simple_calc\simple_calc\simple_calc\obj\Debug\simple_calc.pdb
