@@ -19,3 +19,9 @@ C:\adatok\Dropbox\MA\2_felev\projekt\simple_calc\simple_calc\simple_calc\obj\Deb
 C:\adatok\Dropbox\MA\2_felev\projekt\simple_calc\simple_calc\simple_calc\obj\Debug\simple_calc.pdb
 E:\Dropbox\MA\2_felev\projekt\simple_calc\simple_calc\simple_calc\obj\Debug\simple_calc.exe
 E:\Dropbox\MA\2_felev\projekt\simple_calc\simple_calc\simple_calc\obj\Debug\simple_calc.pdb
+E:\Dropbox\MA\2_felev\projekt\simple_calc\simple_calc\simple_calc\bin\Debug\simple_calc.exe
+E:\Dropbox\MA\2_felev\projekt\simple_calc\simple_calc\simple_calc\bin\Debug\simple_calc.pdb
+E:\Dropbox\MA\2_felev\projekt\simple_calc\simple_calc\simple_calc\obj\Debug\simple_calc.csprojResolveAssemblyReference.cache
+E:\Dropbox\MA\2_felev\projekt\simple_calc\simple_calc\simple_calc\obj\Debug\simple_calc.Form1.resources
+E:\Dropbox\MA\2_felev\projekt\simple_calc\simple_calc\simple_calc\obj\Debug\simple_calc.Properties.Resources.resources
+E:\Dropbox\MA\2_felev\projekt\simple_calc\simple_calc\simple_calc\obj\Debug\simple_calc.csproj.GenerateResource.Cache

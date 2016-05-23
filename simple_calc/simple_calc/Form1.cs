@@ -150,13 +150,12 @@ namespace simple_calc
                     textBox1.Text += s;
                 }
             }
-
         }
 
         public void kiszamol()
         {
             //itt végezzük a kiszámolást, ha egyenlőségjelet nyomott és a textbox1.text nem üres
-            //az utolsó tárolt műveleti jel ==, ez t töröljük
+            //az utolsó tárolt műveleti jel =, ezt töröljük
             muv_tagok.RemoveAt(muv_tagok.Count() - 1);
 
             //bejárjuk a muv_tagok listát és megkeressük, az éppen aktuális műveletet, amíg hibát nem kapunk vissza, vagy el nem fogy a lista
@@ -169,6 +168,8 @@ namespace simple_calc
             {
                 //nincs hiba, az eredmény kiírása
                 textBox1.Text = muv_tagok[0];
+                akt_szam = textBox1.Text;
+                akt_gomb = muv_tagok[0].Substring(muv_tagok[0].Length - 1, 1); //a szövegdoboz utolsó karaktere
                 muv_tagok.Clear();
             }
             else
@@ -176,7 +177,6 @@ namespace simple_calc
                 //hibaüzenet megjelenítése
                 label1.Text = "Érvénytelen művelet!";
             }
-
         }
         public bool szamol(int i)
         {
@@ -213,25 +213,19 @@ namespace simple_calc
                 // hiba volt a feldolgozás során
                 return error = true;
             }
-
         }
-
         public Form1()
         {
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
         private void button6_Click(object sender, EventArgs e)
         {
             tarol("6");
-
         }
-
         private void button12_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
@@ -247,86 +241,60 @@ namespace simple_calc
         {
             //textBox1.Text = "1";
             tarol("1");
-
         }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             tarol("2");
-
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             tarol("3");
-
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
             tarol("4");
-
         }
-
         private void button5_Click(object sender, EventArgs e)
         {
             tarol("5");
-
         }
-
         private void button7_Click(object sender, EventArgs e)
         {
             tarol("7");
-
         }
-
         private void button8_Click(object sender, EventArgs e)
         {
             tarol("8");
-
         }
-
         private void button9_Click(object sender, EventArgs e)
         {
             tarol("9");
-
         }
-
         private void button10_Click(object sender, EventArgs e)
         {
             tarol("0");
-
         }
-
         private void button13_Click(object sender, EventArgs e)
         {
             tarol("+");
-
         }
-
         private void button15_Click(object sender, EventArgs e)
         {
             tarol("-");
-
         }
-
         private void button11_Click(object sender, EventArgs e)
         {
             tarol("*");
-
         }
-
         private void button14_Click(object sender, EventArgs e)
         {
             tarol("/");
-
         }
-
         private void button16_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "")
